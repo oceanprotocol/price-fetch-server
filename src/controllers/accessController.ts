@@ -7,7 +7,7 @@ async function accessController(
 ) {
   console.log('tokenSymbol', tokenSymbol)
   console.log('timestamp', timestamp)
-  let price
+  let price = 0
   // request price
   price = 100
   res.send(price)

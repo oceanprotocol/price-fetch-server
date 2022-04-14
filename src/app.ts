@@ -11,5 +11,5 @@ app.use(cors())
 app.use('/', indexRouter)
 
 app.listen(port, () => {
-  console.log(`RBAC app listening at http://localhost:${port}`)
+  console.log(`Price Request App listening at http://localhost:${port}`)
 })
