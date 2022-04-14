@@ -1,11 +1,20 @@
 {
   "name": "subgraph-fetch-price",
+  "description": "Ocean Protocol Service for requesting prices of tokens",
   "version": "0.0.0",
-  "private": true,
+  "author": "Ocean Protocol <devops@oceanprotocol.com>",
+  "license": "Apache-2.0",
+  "main": "./dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
     "dev": "nodemon src/app.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "npm run clean && tsc --sourcemap",
+    "lint": "eslint --ignore-path .gitignore --ext .js --ext .ts --ext .tsx . && npm run type-check",
+    "clean": "rm -rf ./dist",
+    "format": "prettier --ignore-path .gitignore './**/*.{css,yml,js,ts,tsx,json}' --write",
+    "test": "npm run format && npm run lint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "cors": "^2.8.5",
