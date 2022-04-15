@@ -4,13 +4,11 @@ import requestPrice from '../controllers/requestPrice'
 
 const router = express.Router()
 
-/* GET Access role premissions. */
+/* GET Current Token Price. */
 router.get(
-  ' /ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/',
+  '/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/:tokenId',
   function (req: Request, res: Response) {
-    // Request Price
-    console.log('req', req)
-    requestPrice('string', 'string 2', res)
+    requestPrice(req, res)
   }
 )
 
