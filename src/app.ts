@@ -13,3 +13,4 @@ app.use('/', indexRouter)
 app.listen(port, () => {
   console.log(`Price Request App listening at http://localhost:${port}`)
 })
+export default app
