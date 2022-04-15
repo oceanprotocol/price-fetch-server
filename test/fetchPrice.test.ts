@@ -27,4 +27,20 @@ describe('Price Request Tests', () => {
       .expect(200)
     expect(response.body.usd).to.be.within(0.9, 1.1)
   })
+  it('Gets the historical price of OCEAN', async () => {
+    const response = await request(app)
+      .get(
+        '/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/ocean-protocol/30-12-2021'
+      )
+      .expect('Content-Type', /json/)
+      .expect(200)
+    expect(response.body.usd).to.equal(0.8320073253954497)
+  })
+  it('Gets the historical price of Bitcoin', async () => {
+    const response = await request(app)
+      .get('/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/tether')
+      .expect('Content-Type', /json/)
+      .expect(200)
+    expect(response.body.usd).to.equal(13620.3618741461)
+  })
 })

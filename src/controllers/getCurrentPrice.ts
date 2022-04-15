@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import fetch from 'cross-fetch'
 
-async function accessController(req: Request, res: Response) {
+async function currentPrice(req: Request, res: Response) {
   try {
     const { tokenId } = req.params
     const url = `https://api.coingecko.com/api/v3/simple/price?ids=${tokenId}&vs_currencies=usd`
@@ -14,4 +14,4 @@ async function accessController(req: Request, res: Response) {
   }
 }
 
-export default accessController
+export default currentPrice
