@@ -38,7 +38,9 @@ describe('Price Request Tests', () => {
   })
   it('Gets the historical price of Bitcoin', async () => {
     const response = await request(app)
-      .get('/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/tether')
+      .get(
+        '/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/bitcoin/30-12-2017'
+      )
       .expect('Content-Type', /json/)
       .expect(200)
     expect(response.body.usd).to.equal(13620.3618741461)
