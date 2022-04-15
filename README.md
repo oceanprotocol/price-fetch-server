@@ -90,6 +90,22 @@ Run the following command to run the integration tests:
 npm run test:integration
 ```
 
+## Run in Docker
+
+Run the following command to build the service in a Docker container:
+
+```Bash
+npm run build:docker
+```
+
+Next, run the following command to start running the RBAC service in the Docker container:
+
+```Bash
+npm run start:docker
+```
+
+Now you are ready to send requests to the server via postman. Make sure to replace the URL to http://localhost:49160 in your requests.
+
 ## ✨ Code Style
 
 Code style is automatically enforced through [ESLint](https://eslint.org) & [Prettier](https://prettier.io) rules:
