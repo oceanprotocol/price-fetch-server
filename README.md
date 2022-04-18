@@ -2,6 +2,32 @@
 
 This is an express server for requesting the price of tokens from the CoinGecko API. Prices are returned in USD.
 
+## Running locally
+
+clone this repo:
+
+```Bash
+git clone git@github.com:oceanprotocol/subgraph-fetch-price.git
+```
+
+Change directory:
+
+```Bash
+cd subgraph-fetch-price
+```
+
+Install the dependencies:
+
+```Bash
+npm install
+```
+
+Start the server locally
+
+```Bash
+npm run start
+```
+
 ## Paths
 
 There are two paths for requesting prices, one for the current price and one for the historical price:
