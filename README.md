@@ -2,6 +2,12 @@
 
 This is an express server for requesting the price of tokens from the CoinGecko API. Prices are returned in USD.
 
+## Use Case
+
+This server has been created for cases where the CoinGecko API can't be called directly. Instead, a call to this server can be made via IPFS, which will trigger the request to CoinGecko and this server will then return the requested token prices.
+
+For example, the subgraph cannot make HTTP calls so it can use this server as an alternative way of requesting prices for tokens.
+
 ## Running locally
 
 clone this repo:
