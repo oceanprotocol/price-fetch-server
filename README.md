@@ -71,14 +71,14 @@ This request gets the historical price of the token. The tokenId must be include
 Example Request:
 
 ```
-http://localhost:3000/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/ocean-protocol/30-12-2021
+http://localhost:3000/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/ocean-protocol/1620245790
 ```
 
 Example response:
 
 ```
 {
-    "usd": 0.8320073253954497
+    "usd": 1.4499657614470953
 }
 ```
 
