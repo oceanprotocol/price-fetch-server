@@ -45,14 +45,4 @@ describe('Price Request Tests', () => {
       .expect(200)
     expect(response.body.usd).to.equal(153.0565669307744)
   })
-  it('Gets the historical price of Bitcoin', async () => {
-    const response = await request(app)
-      .get(
-        '/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/bitcoin/1500245790'
-      )
-      .expect('Content-Type', /json/)
-      .expect(200)
-    console.log('Bitcoin price', response.body.usd)
-    expect(response.body.usd).to.equal(2436.0363)
-  })
 })
