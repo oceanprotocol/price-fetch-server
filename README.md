@@ -62,10 +62,10 @@ Example response:
 
 ### GET Historical Price
 
-This request gets the historical price of the token. The tokenId must be included in the request, a list of valid tokenIds are [here](./tokenIdList.json). An up to date list can be requested from CoinGecko `GET https://api.coingecko.com/api/v3/coins/list`. The request must also include the date in dd-mm-yyyy format (eg. 30-12-2017)
+This request gets the historical price of the token. The tokenId must be included in the request, a list of valid tokenIds are [here](./tokenIdList.json). An up to date list can be requested from CoinGecko `GET https://api.coingecko.com/api/v3/coins/list`. The request must also include the timestamp in unix timestamp format (eg. 1550245790).
 
 ```
-/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/:tokenId/:date
+/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/:tokenId/:timestamp
 ```
 
 Example Request:
